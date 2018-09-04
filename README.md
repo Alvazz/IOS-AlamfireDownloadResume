@@ -6,7 +6,7 @@
 
 ### 效果图：
 
-![动态壁纸](https://github.com/coolspan/IOS-AlamfireDownloadResume/blob/master/screenshots/downresume.gif)
+![动态壁纸](https://github.com/coolspan/IOS-AlamfireDownloadResume/blob/master/Screenshots/downresume.gif)
 
 ### 知识点
 
