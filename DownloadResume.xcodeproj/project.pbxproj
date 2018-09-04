@@ -16,10 +16,10 @@
 		E3EA0F7821390E29001A37A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3EA0F7421390E29001A37A7 /* Main.storyboard */; };
 		E3EA0F7921390E29001A37A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3EA0F7621390E29001A37A7 /* LaunchScreen.storyboard */; };
 		E3EA0F7C21390E4B001A37A7 /* DownloadResumeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EA0F7B21390E4B001A37A7 /* DownloadResumeManager.swift */; };
-		E3EA0F7E21390ECE001A37A7 /* RealmTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EA0F7D21390ECE001A37A7 /* RealmTool.swift */; };
 		E3EA0F812139136E001A37A7 /* ResumeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EA0F802139136E001A37A7 /* ResumeModel.swift */; };
 		E3EA0F8321391A06001A37A7 /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EA0F8221391A06001A37A7 /* DataBaseManager.swift */; };
 		E3EA0F8621391FE4001A37A7 /* FileUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EA0F8521391FE4001A37A7 /* FileUtil.swift */; };
+		E3EA0F9A213E58C0001A37A7 /* LogUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EA0F99213E58C0001A37A7 /* LogUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +28,7 @@
 		9F87B24F5D5FCE5CCBD3BBBD /* Pods_DownloadResume.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DownloadResume.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3046B6B2137DAC1005D21CA /* DownloadResume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DownloadResume.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3EA0F6921390E1A001A37A7 /* DownloadResume-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DownloadResume-Bridging-Header.h"; sourceTree = "<group>"; };
-		E3EA0F6A21390E1A001A37A7 /* DownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DownloadManager.swift; path = DownloadResume/DownloadManager.swift; sourceTree = SOURCE_ROOT; };
+		E3EA0F6A21390E1A001A37A7 /* DownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DownloadManager.swift; path = DownloadResume/ResumeData/DownloadManager.swift; sourceTree = SOURCE_ROOT; };
 		E3EA0F6B21390E1A001A37A7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = DownloadResume/Info.plist; sourceTree = SOURCE_ROOT; };
 		E3EA0F6C21390E1A001A37A7 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = DownloadResume/ViewController.swift; sourceTree = SOURCE_ROOT; };
 		E3EA0F7021390E22001A37A7 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = DownloadResume/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
@@ -36,10 +36,10 @@
 		E3EA0F7521390E29001A37A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DownloadResume/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		E3EA0F7721390E29001A37A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DownloadResume/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		E3EA0F7B21390E4B001A37A7 /* DownloadResumeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadResumeManager.swift; sourceTree = "<group>"; };
-		E3EA0F7D21390ECE001A37A7 /* RealmTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmTool.swift; sourceTree = "<group>"; };
 		E3EA0F802139136E001A37A7 /* ResumeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeModel.swift; sourceTree = "<group>"; };
 		E3EA0F8221391A06001A37A7 /* DataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
 		E3EA0F8521391FE4001A37A7 /* FileUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUtil.swift; sourceTree = "<group>"; };
+		E3EA0F99213E58C0001A37A7 /* LogUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,13 +101,12 @@
 		E3EA0F6821390E09001A37A7 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				E3EA0F6A21390E1A001A37A7 /* DownloadManager.swift */,
 				E3EA0F7021390E22001A37A7 /* AppDelegate.swift */,
 				E3EA0F7621390E29001A37A7 /* LaunchScreen.storyboard */,
 				E3EA0F7421390E29001A37A7 /* Main.storyboard */,
+				E3EA0F6C21390E1A001A37A7 /* ViewController.swift */,
 				E3EA0F7121390E22001A37A7 /* Assets.xcassets */,
 				E3EA0F6B21390E1A001A37A7 /* Info.plist */,
-				E3EA0F6C21390E1A001A37A7 /* ViewController.swift */,
 				E3EA0F6921390E1A001A37A7 /* DownloadResume-Bridging-Header.h */,
 			);
 			path = App;
@@ -116,12 +115,11 @@
 		E3EA0F7A21390E31001A37A7 /* ResumeData */ = {
 			isa = PBXGroup;
 			children = (
-				E3EA0F8721392CBC001A37A7 /* Extensions */,
+				E3EA0F98213E58AC001A37A7 /* DB */,
 				E3EA0F8421391FDA001A37A7 /* Util */,
 				E3EA0F7F2139135D001A37A7 /* Model */,
 				E3EA0F7B21390E4B001A37A7 /* DownloadResumeManager.swift */,
-				E3EA0F7D21390ECE001A37A7 /* RealmTool.swift */,
-				E3EA0F8221391A06001A37A7 /* DataBaseManager.swift */,
+				E3EA0F6A21390E1A001A37A7 /* DownloadManager.swift */,
 			);
 			path = ResumeData;
 			sourceTree = "<group>";
@@ -138,15 +136,17 @@
 			isa = PBXGroup;
 			children = (
 				E3EA0F8521391FE4001A37A7 /* FileUtil.swift */,
+				E3EA0F99213E58C0001A37A7 /* LogUtil.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
 		};
-		E3EA0F8721392CBC001A37A7 /* Extensions */ = {
+		E3EA0F98213E58AC001A37A7 /* DB */ = {
 			isa = PBXGroup;
 			children = (
+				E3EA0F8221391A06001A37A7 /* DataBaseManager.swift */,
 			);
-			path = Extensions;
+			path = DB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,9 +269,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3EA0F9A213E58C0001A37A7 /* LogUtil.swift in Sources */,
 				E3EA0F7221390E22001A37A7 /* AppDelegate.swift in Sources */,
 				E3EA0F6F21390E1A001A37A7 /* ViewController.swift in Sources */,
-				E3EA0F7E21390ECE001A37A7 /* RealmTool.swift in Sources */,
 				E3EA0F7C21390E4B001A37A7 /* DownloadResumeManager.swift in Sources */,
 				E3EA0F8321391A06001A37A7 /* DataBaseManager.swift in Sources */,
 				E3EA0F812139136E001A37A7 /* ResumeModel.swift in Sources */,

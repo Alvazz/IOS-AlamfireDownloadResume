@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,47 +19,95 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFZ-S0-5do">
-                                <rect key="frame" x="156" y="125" width="62" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="开始下载"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eta-Pv-9sh">
-                                <rect key="frame" x="156" y="222" width="62" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="暂停下载"/>
-                                <connections>
-                                    <action selector="downloadPause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jeL-cM-J6C"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhY-cv-w7c">
-                                <rect key="frame" x="156" y="125" width="62" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="开始下载"/>
-                                <connections>
-                                    <action selector="downloadStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aSj-1K-KWc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64X-uN-exI">
-                                <rect key="frame" x="156" y="318" width="62" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="单文件下载" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJe-i7-9V5">
+                                <rect key="frame" x="16" y="36" width="343" height="31.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64X-uN-exI">
+                                <rect key="frame" x="156" y="156.5" width="62" height="30"/>
                                 <state key="normal" title="取消下载"/>
                                 <connections>
                                     <action selector="downloadCancel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GQT-gz-IBE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zGB-Cl-gC0">
-                                <rect key="frame" x="158" y="417" width="59" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="批量下载" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQG-VJ-e7s">
+                                <rect key="frame" x="16" y="234.5" width="343" height="32"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zGB-Cl-gC0">
+                                <rect key="frame" x="158" y="596" width="59" height="30"/>
                                 <state key="normal" title="退出App"/>
                                 <connections>
                                     <action selector="exitApp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SF3-c4-4vX"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yIB-NM-25E">
+                                <rect key="frame" x="156" y="307" width="62" height="30"/>
+                                <state key="normal" title="开始下载"/>
+                                <connections>
+                                    <action selector="downloadMoreStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yiK-JA-wQz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ob-DV-kpu">
+                                <rect key="frame" x="156" y="370" width="62" height="30"/>
+                                <state key="normal" title="取消下载"/>
+                                <connections>
+                                    <action selector="downloadMoreCancel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Jl-mo-t1K"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="x8g-5V-kh4">
+                                <rect key="frame" x="32" y="82" width="311" height="2"/>
+                            </progressView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8U5-VW-Ipb">
+                                <rect key="frame" x="32" y="289" width="311" height="2"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFZ-S0-5do">
+                                <rect key="frame" x="156" y="99.5" width="62" height="30"/>
+                                <state key="normal" title="开始下载"/>
+                                <connections>
+                                    <action selector="downloadStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3si-8b-WVc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="x8g-5V-kh4" firstAttribute="top" secondItem="oJe-i7-9V5" secondAttribute="bottom" constant="14.5" id="2DQ-Pg-Ns2"/>
+                            <constraint firstItem="JQG-VJ-e7s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="CSc-2L-6xW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zGB-Cl-gC0" secondAttribute="bottom" constant="41" id="E5e-Kb-OZT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="x8g-5V-kh4" secondAttribute="trailing" constant="16" id="IIC-Ih-M7I"/>
+                            <constraint firstItem="KFZ-S0-5do" firstAttribute="top" secondItem="oJe-i7-9V5" secondAttribute="bottom" constant="32" id="JNZ-EA-tPh"/>
+                            <constraint firstItem="oJe-i7-9V5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="L0U-vL-9vl"/>
+                            <constraint firstItem="8U5-VW-Ipb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="16" id="LBX-r8-JgJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8U5-VW-Ipb" secondAttribute="trailing" constant="16" id="LXN-QN-o3g"/>
+                            <constraint firstItem="JQG-VJ-e7s" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MSj-ww-ATK"/>
+                            <constraint firstItem="JQG-VJ-e7s" firstAttribute="top" secondItem="64X-uN-exI" secondAttribute="bottom" constant="48" id="Mvr-oW-QEz"/>
+                            <constraint firstItem="x8g-5V-kh4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="16" id="RU7-Z2-wrh"/>
+                            <constraint firstItem="x8g-5V-kh4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TQp-PY-EvH"/>
+                            <constraint firstItem="yIB-NM-25E" firstAttribute="top" secondItem="8U5-VW-Ipb" secondAttribute="bottom" constant="16" id="UvK-7o-gOD"/>
+                            <constraint firstItem="8U5-VW-Ipb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VNm-xh-wyu"/>
+                            <constraint firstItem="64X-uN-exI" firstAttribute="top" secondItem="KFZ-S0-5do" secondAttribute="bottom" constant="27" id="Woi-HP-RO2"/>
+                            <constraint firstItem="oJe-i7-9V5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xf3-x3-LEj"/>
+                            <constraint firstItem="yIB-NM-25E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ysm-hy-gIx"/>
+                            <constraint firstItem="JQG-VJ-e7s" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zif-76-9BP"/>
+                            <constraint firstItem="8U5-VW-Ipb" firstAttribute="top" secondItem="JQG-VJ-e7s" secondAttribute="bottom" constant="22.5" id="bAx-eg-LTR"/>
+                            <constraint firstItem="64X-uN-exI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d2k-z2-tNQ"/>
+                            <constraint firstItem="KFZ-S0-5do" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gX7-PC-S5e"/>
+                            <constraint firstItem="8Ob-DV-kpu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="glf-b5-sPf"/>
+                            <constraint firstItem="zGB-Cl-gC0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hvy-fI-cNk"/>
+                            <constraint firstItem="8Ob-DV-kpu" firstAttribute="top" secondItem="yIB-NM-25E" secondAttribute="bottom" constant="33" id="kE1-2B-c9r"/>
+                            <constraint firstItem="oJe-i7-9V5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="nwy-KY-1Ac"/>
+                            <constraint firstItem="oJe-i7-9V5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pWo-jS-vu0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="progressMoreView" destination="8U5-VW-Ipb" id="MIC-nR-PnZ"/>
+                        <outlet property="progressSingleView" destination="x8g-5V-kh4" id="8yq-p6-sCL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
